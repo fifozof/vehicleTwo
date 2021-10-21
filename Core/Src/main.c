@@ -117,10 +117,10 @@ int main(void)
 		  //HAL_UART_Transmit(&huart2, (uint8_t*)buf, len, 1000);
 		  if (distance < 10) {
 			  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 999);
-			  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 1850);
+			  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 1900);
 			  HAL_GPIO_WritePin(DIR_2_GPIO_Port, DIR_2_Pin, 0);
 			  HAL_GPIO_WritePin(DIR_1_GPIO_Port, DIR_1_Pin, 1);
-			  HAL_Delay(5000);
+			  HAL_Delay(11000);
 		  }
 	  } else {
 		  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 0);
